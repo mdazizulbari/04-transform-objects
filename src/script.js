@@ -32,6 +32,15 @@ const scene = new THREE.Scene();
 // mesh.rotation.x = Math.PI * 0.25;
 // mesh.rotation.y = Math.PI * 0.25;
 
+const group = new THREE.Group();
+scene.add(group);
+
+const cube1 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ color: 0xff00000 })
+);
+group.add(cube1)
+
 // Axes helper
 const axesHelper = new THREE.AxesHelper(3);
 scene.add(axesHelper);
